@@ -26,7 +26,8 @@ BEGIN
 		   (End_STN_6 - Start_STN_6) ST_6, 
 		   (Mach_Total_End - Mach_Total_Start) + (Reject_Total_End - Reject_Total_Start) Total,
 		   (Reject_Total_End - Reject_Total_Start) AGR,
-		   (Mach_Total_End - Mach_Total_Start) Net
+		   (Mach_Total_End - Mach_Total_Start) Net,		   
+		   PartNum
 		FROM agr_counts
 		WHERE End_time IS NOT NULL
 		AND RecordType = 'shift'
