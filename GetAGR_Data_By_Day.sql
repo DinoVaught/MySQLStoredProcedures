@@ -5,8 +5,8 @@ BEGIN
 	  DECLARE start_date VARCHAR(50);
 	  DECLARE end_date VARCHAR(50);	
 	
-    SET start_date = CONCAT(SUBDATE(qryDate, INTERVAL 1 DAY), ' 23:00:00');
-    SET end_date = CONCAT(qryDate, ' 22:59:59');
+    SET start_date = CONCAT(SUBDATE(qryDate, INTERVAL 1 DAY), ' 22:59:00');
+    SET end_date = CONCAT(qryDate, ' 23:01:00');
   
 --    CALL debug_msg_log('GetAGR_Data_By_Day', start_date, end_date);
 	
@@ -26,8 +26,8 @@ BEGIN
 		   (End_STN_6 - Start_STN_6) ST_6, 
 		   (Mach_Total_End - Mach_Total_Start) + (Reject_Total_End - Reject_Total_Start) Total,
 		   (Reject_Total_End - Reject_Total_Start) AGR,
-		   (Mach_Total_End - Mach_Total_Start) Net,		   
-		   PartNum
+		   (Mach_Total_End - Mach_Total_Start) Net,
+       PartNum
 		FROM agr_counts
 		WHERE End_time IS NOT NULL
 		AND RecordType = 'shift'
