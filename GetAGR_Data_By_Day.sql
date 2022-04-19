@@ -32,7 +32,7 @@ BEGIN
 		WHERE End_time IS NOT NULL
 		AND RecordType = 'shift'
 		AND Start_Time BETWEEN start_date AND end_date
-    -- AND Start_Time BETWEEN '2022-02-27 23:00:00' AND '2022-02-28 22:59:59' 
+		AND End_Time < end_date
 		-- AND Start_Time BETWEEN '2022-02-27 23:00:00' AND '2022-02-28 22:59:59' 
 		-- AND Gage_ID = "G25"  2022-02-27 23:00:00       2022-02-28 22:59:59
 		ORDER BY Gage_ID, Start_Time;
