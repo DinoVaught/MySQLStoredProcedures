@@ -11,6 +11,8 @@ BEGIN
     SET start_date = CONCAT(SUBDATE(qryDate, INTERVAL 1 DAY), ' 22:59:00');
     SET end_date = CONCAT(qryDate, ' 23:01:00');
   
+    CALL debug_msg_log('GetAGR_Data_By_Day', start_date, end_date);
+  
 		SELECT  
 		   Start_Time,
 		   End_Time,
