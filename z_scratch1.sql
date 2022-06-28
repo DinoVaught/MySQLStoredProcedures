@@ -5,13 +5,13 @@ ORDER BY created DESC;
 SELECT created, msg FROM debug
 WHERE msgID LIKE('%zsw%')
 AND msg NOT LIKE('%False%')
-AND created > '2022-06-23 12:45:00'
+AND created > '2022-06-23 11:00:00'
 ORDER BY created DESC;
 
 SELECT DISTINCT(msg) FROM debug
 WHERE msgID LIKE('%zsw%')
 AND msg NOT LIKE('%False%')
-AND created > '2022-06-23 10:16:16'
+AND created > '2022-06-23 12:45:00'
 ORDER BY created DESC;
 
 

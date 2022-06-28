@@ -38,6 +38,8 @@ BEGIN
 --    call debug_msg_log('greenbonnet', CONCAT('StartSTN_6 = ',  StartSTN_6), CONCAT('MachTotalStart = ', MachTotalStart));
 --  END IF;
 
+  
+  
   IF (StartSTN_1 IS NULL) THEN
     SET st_1 = 0;
   ELSE
